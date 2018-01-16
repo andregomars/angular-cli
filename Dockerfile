@@ -4,6 +4,8 @@ FROM node:8.9.4-alpine
 RUN chown -R node:node /usr/local/lib/node_modules \
   && chown -R node:node /usr/local/bin
 
+RUN apk update
+RUN apk add yarn
+RUN yarn global add @angular/cli --prefix /usr/local
 USER node
-RUN npm install -g @angular/cli
 WORKDIR /home/node
