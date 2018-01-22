@@ -6,6 +6,6 @@ RUN chown -R node:node /usr/local/lib/node_modules \
 
 RUN apk update
 RUN apk add yarn
-RUN yarn global add @angular/cli --prefix /usr/local
+RUN yarn global add @angular/cli@1.6.5 --prefix /usr/local
 USER node
 WORKDIR /home/node
